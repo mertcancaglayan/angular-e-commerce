@@ -1,0 +1,70 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  .header-title {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    h2 {
+      font-family: "Elephant";
+      font-size: 40px;
+      line-height: 49px;
+      color: #224f34;
+    }
+  }
+}
+
+nav {
+  width: 30%;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    li {
+      a {
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 33px;
+        text-transform: uppercase;
+        color: #224f34;
+        text-decoration: none;
+        .active {
+          text-decoration: dashed;
+        }
+      }
+    }
+  }
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 30%;
+  .cart {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .login-button {
+    border: 1px solid black;
+    height: 52px;
+    width: 142px;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #224f34;
+    cursor: pointer;
+    background: transparent;
+  }
+}
