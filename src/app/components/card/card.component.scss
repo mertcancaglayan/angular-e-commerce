@@ -1,5 +1,12 @@
 .product-card {
-  width: 300px;
+  &.best-selling-section {
+    width: 300px;
+  }
+
+  &.our-products-section {
+    width: 200px;
+  }
+
   .img-container {
     width: 100%;
     img {
@@ -41,7 +48,7 @@
         display: flex;
         align-items: center;
         gap: 5px;
-    }
+      }
     }
   }
 }

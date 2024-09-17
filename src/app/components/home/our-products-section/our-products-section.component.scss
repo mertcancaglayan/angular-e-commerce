@@ -1,0 +1,52 @@
+section.our-products-section {
+  background-color: aliceblue;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  h2.section-title {
+    font-family: "Roboto Slab";
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 66px;
+    color: #224f34;
+  }
+
+  .categories-container {
+    width: 50%;
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      li {
+        a {
+          font-family: "Poppins";
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 33px;
+          text-transform: uppercase;
+          color: #454545;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .products-container {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    .products {
+      justify-content: center;
+      width: 100%;
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+  }
+}
