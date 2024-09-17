@@ -16,7 +16,7 @@ section.our-products-section {
   }
 
   .categories-container {
-    width: 50%;
+    width: 60%;
     ul {
       list-style: none;
       display: flex;
@@ -40,13 +40,13 @@ section.our-products-section {
   .products-container {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 80%;
     .products {
       justify-content: center;
       width: 100%;
-      display: flex;
-      gap: 50px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 200px); 
+      justify-content: space-between; 
     }
   }
 }
