@@ -6,11 +6,12 @@ import { OurProductsSectionComponent } from "./our-products-section/our-products
 import { OfferSectionComponent } from "./offer-section/offer-section.component";
 import { RecommendationSectionComponent } from "./recommendation-section/recommendation-section.component";
 import { TestimonialSectionComponent } from "./testimonial-section/testimonial-section.component";
+import { FooterComponent } from "../layouts/footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, BestSellingSectionComponent, OurProductsSectionComponent, OfferSectionComponent, RecommendationSectionComponent, TestimonialSectionComponent],
+  imports: [HeaderComponent, BannerComponent, BestSellingSectionComponent, OurProductsSectionComponent, OfferSectionComponent, RecommendationSectionComponent, TestimonialSectionComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
