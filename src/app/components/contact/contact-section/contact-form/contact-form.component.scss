@@ -1,0 +1,33 @@
+.form-area {
+  width: 45%;
+  background-color: gray;
+
+  .form-title {
+    h3 {
+      font-family: "Roboto Slab";
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 220%;
+      color: #267d49;
+    }
+  }
+
+  .form-text {
+    p {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #224f34;
+    }
+  }
+}
+
+form.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 35px;
+  margin: 30px 0 0;
+}
