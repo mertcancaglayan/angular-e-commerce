@@ -1,0 +1,29 @@
+.category-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .category-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    background-color: #224f34;
+    font-family: "Roboto Slab";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #c2efd4;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+        font-size: 19px;
+        color: #ffffff;
+    }
+  }
+}
