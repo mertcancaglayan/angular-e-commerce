@@ -1,4 +1,12 @@
 <section class="categories-section">
   <h2 class="page-title">Categories</h2>
   <app-category-type></app-category-type>
+
+  <div class="product-list" *ngIf="products.length">
+    <app-card
+      *ngFor="let product of products"
+      [product]="product"
+      [cardType]="cardType"
+    ></app-card>
+  </div>
 </section>
