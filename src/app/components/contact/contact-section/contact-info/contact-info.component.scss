@@ -1,0 +1,44 @@
+.contact-info-container {
+  background-color: #224f34;
+  color: #c2efd4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-icon {
+      margin-right: 15px;
+      width: 24px;
+      height: 24px;
+
+      svg {
+        path {
+          fill: whitesmoke;
+        }
+      }
+    }
+
+    .contact-info {
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      line-height: 30px;
+      text-transform: capitalize;
+      color: #c2efd4;
+      text-decoration: none;
+
+      strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
