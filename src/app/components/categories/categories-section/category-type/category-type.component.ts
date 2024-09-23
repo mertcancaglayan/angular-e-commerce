@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './category-type.component.html',
-  styleUrl: './category-type.component.scss',
+  styleUrls: ['./category-type.component.scss'], 
 })
 export class CategoryTypeComponent {
   categories: string[] = [

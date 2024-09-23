@@ -1,20 +1,21 @@
 <div class="product-card" [ngClass]="cardType">
   <div class="img-container">
-    <img
-      src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-      alt="Product Image"
-    />
+    <img [src]="product.image" 
+    alt="Product Image" />
   </div>
   <div class="product-details-container">
     <div class="product-title-area">
-      <h4 class="product-title">Lorem Ipsun dolar mut.</h4>
+      <h4 class="product-title">{{ product.title }}</h4>
+      <!-- Bind title -->
     </div>
     <div class="product-details">
-      <p class="product-price">$38.99</p>
+      <p class="product-price">${{ product.price }}</p>
+      <!-- Bind price -->
       <div class="v-line"></div>
 
       <div class="product-rating">
-        <p>5.0</p>
+        <p>{{ product.rating.rate }}</p>
+        <!-- Bind rating -->
         <div class="start-icon">
           <svg
             width="24"
