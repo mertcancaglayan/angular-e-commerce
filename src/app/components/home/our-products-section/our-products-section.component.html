@@ -9,15 +9,12 @@
     </ul>
   </div>
   <div class="products-container">
-    <div class="products">
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
+    <div class="products" *ngIf="products.length">
+      <app-card
+        *ngFor="let product of products.slice(4, 12)"
+        [product]="product"
+        [cardType]="cardType"
+      ></app-card>
     </div>
   </div>
 </section>

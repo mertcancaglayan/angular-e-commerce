@@ -2,10 +2,12 @@
   <h2>Best selling</h2>
   <p>Get in on the trend with our curated selection of best-selling styles.</p>
   <div class="cards-container">
-    <div class="cards">
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
-      <app-card [cardType]="cardType"></app-card>
+    <div class="cards" *ngIf="products.length">
+      <app-card
+        *ngFor="let product of products.slice(0, 3)"
+        [product]="product"
+        [cardType]="cardType"
+      ></app-card>
     </div>
   </div>
 

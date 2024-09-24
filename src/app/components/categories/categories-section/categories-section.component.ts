@@ -4,6 +4,7 @@ import { CardComponent } from '../../card/card.component';
 import { FakeStoreApiService } from '../../../services/fake-store-api.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router'; // ActivatedRoute import ediliyor
 
 @Component({
   selector: 'app-categories-section',
@@ -20,18 +21,41 @@ import { HttpClientModule } from '@angular/common/http';
 export class CategoriesSectionComponent implements OnInit {
   cardType: string = 'our-products-section';
   products: any[] = [];
+  category: string | null = null;
 
-  constructor(private apiService: FakeStoreApiService) {}
+  constructor(
+    private apiService: FakeStoreApiService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.apiService.getAllProducts().subscribe(
-      (data) => {
-        this.products = data;
-        console.log(this.products);
-      },
-      (error) => {
-        console.error('Error fetching products', error);
-      }
-    );
+    this.route.queryParams.subscribe((params) => {
+      this.category = params['category'] || null;
+      this.fetchData();
+    });
+  }
+
+  fetchData(): void {
+    if (this.category) {
+      this.apiService.getProductsByCategory(this.category).subscribe(
+        (data) => {
+          this.products = data;
+          console.log(this.products);
+        },
+        (error) => {
+          console.error('Error fetching products by category', error);
+        }
+      );
+    } else {
+      this.apiService.getAllProducts().subscribe(
+        (data) => {
+          this.products = data;
+          console.log(this.products);
+        },
+        (error) => {
+          console.error('Error fetching products', error);
+        }
+      );
+    }
   }
 }
