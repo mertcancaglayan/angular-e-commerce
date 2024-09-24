@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CardComponent } from '../../card/card.component';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../../models/product.model';
 
 @Component({
   selector: 'app-best-selling-section',
@@ -11,5 +12,5 @@ import { CommonModule } from '@angular/common';
 })
 export class BestSellingSectionComponent {
   cardType: string = 'best-selling-section';
-  @Input() products: any[] = [];
+  @Input() products: Product[] = [];
 }

@@ -8,6 +8,7 @@ import { RecommendationSectionComponent } from './recommendation-section/recomme
 import { TestimonialSectionComponent } from './testimonial-section/testimonial-section.component';
 import { FooterComponent } from '../layouts/footer/footer.component';
 import { FakeStoreApiService } from '../../services/fake-store-api.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,7 @@ import { FakeStoreApiService } from '../../services/fake-store-api.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  products: any[] = [];
+  products: Product[] = [];
 
   constructor(private apiService: FakeStoreApiService) {}
 
