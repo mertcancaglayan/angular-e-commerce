@@ -11,7 +11,7 @@ import { categories } from '../../../../utils/category-list';
   styleUrls: ['./category-type.component.scss'],
 })
 export class CategoryTypeComponent {
-  categoriesList = categories; 
+  categoriesList: string[] = categories;
 
   constructor(private router: Router) {}
 

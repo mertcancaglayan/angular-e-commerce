@@ -5,6 +5,7 @@ import { FakeStoreApiService } from '../../../services/fake-store-api.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { Product } from '../../../models/product.model';
 
 @Component({
   selector: 'app-categories-section',
@@ -20,7 +21,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CategoriesSectionComponent implements OnInit {
   cardType: string = 'our-products-section';
-  products: any[] = [];
+  products: Product[] = [];
   category: string | null = null;
 
   constructor(
