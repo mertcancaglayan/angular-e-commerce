@@ -1,21 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { categories } from '../../../../utils/category-list';
 
 @Component({
   selector: 'app-category-type',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './category-type.component.html',
-  styleUrls: ['./category-type.component.scss'], 
+  styleUrls: ['./category-type.component.scss'],
 })
 export class CategoryTypeComponent {
-  categories: string[] = [
-    'electronics',
-    'jewelery',
-    "men's clothing",
-    "women's clothing",
-  ];
+  categoriesList = categories; 
 
   constructor(private router: Router) {}
 

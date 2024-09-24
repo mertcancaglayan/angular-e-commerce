@@ -4,7 +4,7 @@ import { CardComponent } from '../../card/card.component';
 import { FakeStoreApiService } from '../../../services/fake-store-api.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router'; // ActivatedRoute import ediliyor
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-categories-section',
