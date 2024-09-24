@@ -6,8 +6,11 @@
         <a [routerLink]="'/home'" routerLinkActive="active">HOME</a>
       </li>
       <li><a [routerLink]="'/shop'" routerLinkActive="active">SHOP</a></li>
-      <li>
+      <li id="categories-nav-btn">
         <a [routerLink]="'/categories'" routerLinkActive="active">Categories</a>
+        <div class="dropdown">
+          <p *ngFor="let category of categoriesList" (click)="navigateToCategory(category)">{{ category }}</p>
+        </div>
       </li>
       <li>
         <a [routerLink]="'/contact'" routerLinkActive="active">CONTACT</a>
