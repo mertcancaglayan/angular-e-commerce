@@ -15,6 +15,14 @@ body {
   min-height: 100vh;
 }
 
+
+app-single-product-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 h2.page-title {
   text-align: left;
   width: 75%;
