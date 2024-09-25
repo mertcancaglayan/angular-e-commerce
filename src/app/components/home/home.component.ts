@@ -39,7 +39,6 @@ export class HomeComponent implements OnInit {
     this.apiService.getAllProducts().subscribe(
       (data) => {
         this.products = data;
-        console.log(this.products);
       },
       (error) => {
         console.error('Error fetching products', error);

@@ -41,7 +41,6 @@ export class CategoriesSectionComponent implements OnInit {
       this.apiService.getProductsByCategory(this.category).subscribe(
         (data) => {
           this.products = data;
-          console.log(this.products);
         },
         (error) => {
           console.error('Error fetching products by category', error);
@@ -51,7 +50,6 @@ export class CategoriesSectionComponent implements OnInit {
       this.apiService.getAllProducts().subscribe(
         (data) => {
           this.products = data;
-          console.log(this.products);
         },
         (error) => {
           console.error('Error fetching products', error);
