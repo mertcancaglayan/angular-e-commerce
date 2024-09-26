@@ -1,0 +1,90 @@
+#cd-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 25%;
+  background-color: #ffffff;
+  width: 565px;
+
+  h2 {
+    text-align: center;
+  }
+  .cartsDisplay {
+    width: 100%;
+    height: 80%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    .cartProduct {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 90%;
+      height: 100px;
+      font-family: "Poppins";
+      font-weight: 500;
+      font-size: 16px;
+      color: #267d49;
+      .cartProductImage {
+        display: flex;
+        align-items: center;
+        width: 90px;
+        aspect-ratio: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  hr.line {
+    color: black;
+    height: 1px;
+    width: 100%;
+  }
+
+  .cart-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+
+    .total-price {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-family: "Poppins";
+      color: black;
+      h5 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    .cart-button {
+      width: 110px;
+      button.buy-now-btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        background-color: #224f34;
+        color: white;
+      }
+    }
+  }
+}

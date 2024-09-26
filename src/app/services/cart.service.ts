@@ -23,4 +23,8 @@ export class CartService {
 
     return this.http.put(`${this.apiUrl}/${cartId}`, body);
   }
+
+  getSingleCart(cartId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${cartId}`);
+  }
 }
