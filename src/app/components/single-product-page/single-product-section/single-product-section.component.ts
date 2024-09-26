@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../models/product.model';
 import { ActivatedRoute } from '@angular/router';
 import { FakeStoreApiService } from '../../../services/fake-store-api.service';
+import { ProductActionsComponent } from "./product-actions/product-actions.component";
 
 @Component({
   selector: 'app-single-product-section',
   standalone: true,
-  imports: [],
+  imports: [ProductActionsComponent],
   templateUrl: './single-product-section.component.html',
   styleUrl: './single-product-section.component.scss',
 })
