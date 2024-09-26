@@ -1,0 +1,14 @@
+<div class="product-actions">
+  <div class="quantity-section">
+    <label for="quantity">Quantity</label>
+    <div class="quantity-control">
+      <button (click)="decreaseQuantity()">-</button>
+      <span>{{ quantity }}</span>
+      <button (click)="increaseQuantity()">+</button>
+    </div>
+  </div>
+
+  <button class="add-to-cart-btn" (click)="addToCart()">Add To Cart</button>
+
+  <button class="buy-now-btn" (click)="buyNow()">Buy Now</button>
+</div>
