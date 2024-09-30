@@ -36,8 +36,9 @@ nav {
         text-transform: uppercase;
         color: #224f34;
         text-decoration: none;
-        .active {
-          text-decoration: dashed;
+        &.active {
+          color: #645e06;
+          text-decoration: underline;
         }
       }
     }
