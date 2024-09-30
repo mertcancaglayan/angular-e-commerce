@@ -3,6 +3,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SingleProductPageComponent } from './components/single-product-page/single-product-page.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -10,6 +11,7 @@ export const routes: Routes = [
   { path: 'product/:id', component: SingleProductPageComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'categories', component: CategoriesComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: HomeComponent },
 ];
 
