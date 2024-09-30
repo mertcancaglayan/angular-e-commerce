@@ -11,5 +11,4 @@ import { SingleProductSectionComponent } from "./single-product-section/single-p
   styleUrl: './single-product-page.component.scss'
 })
 export class SingleProductPageComponent {
-
 }

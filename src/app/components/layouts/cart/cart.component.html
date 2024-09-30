@@ -1,5 +1,8 @@
-<aside id="cd-cart" class="speed-in">
-  <h2>Cart</h2>
+<aside id="cd-cart" class="speed-in" [ngClass]="{ 'open': isCartOpen() }">
+  <div class="cart-header">
+    <h2>Cart</h2>
+    <div class="close-btn" (click)="toggleCart()">✖</div>
+  </div>
   <hr class="line" />
 
   <div class="cartsDisplay">

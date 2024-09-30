@@ -7,6 +7,7 @@ import { CartProduct } from '../models/cart.model';
   providedIn: 'root',
 })
 export class CartService {
+  private isCartOpen = false;
   private apiUrl = 'https://fakestoreapi.com/carts';
 
   constructor(private http: HttpClient) {}
@@ -26,5 +27,15 @@ export class CartService {
 
   getSingleCart(cartId: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/${cartId}`);
+  }
+
+  toggleCart() {
+    this.isCartOpen = !this.isCartOpen;
+    
+  }
+
+  isCartOpened(): boolean {
+    console.log(this.isCartOpen);
+    return this.isCartOpen;
   }
 }
