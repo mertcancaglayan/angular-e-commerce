@@ -43,7 +43,9 @@ export class ProductActionsComponent {
     });
   }
 
-  buyNow() {
-    console.log(`Buying ${this.quantity} item(s) now.`);
+  toggleCart() {
+    this.cartService.toggleCart();
   }
+
+
 }

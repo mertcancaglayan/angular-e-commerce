@@ -1,0 +1,32 @@
+<aside id="cd-cart" class="speed-in" [ngClass]="{ 'open': isCartOpen() }">
+  <div class="cart-header">
+    <h2>Cart</h2>
+    <div class="close-btn" (click)="toggleCart()">✖</div>
+  </div>
+  <hr class="line" />
+
+  <div class="cartsDisplay">
+    <div class="cartProduct">
+      <div class="cartProductImage">
+        <img src="../../../../assets/images/rrr (1).png" alt="" />
+      </div>
+      <div class="cartProductDetails">
+        <h4>Headphones Wireless</h4>
+        <div>
+          <span>105</span>
+          <span>x5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="line" />
+  <div class="cart-actions">
+    <div class="total-price">
+      <h5>Subtotal</h5>
+      <span>$105</span>
+    </div>
+    <div class="cart-button">
+      <button class="buy-now-btn">Buy Now</button>
+    </div>
+  </div>
+</aside>

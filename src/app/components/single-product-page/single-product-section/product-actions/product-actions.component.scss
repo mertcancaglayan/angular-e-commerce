@@ -49,8 +49,19 @@
 }
 
 .add-to-cart-btn {
-  background-color: #f0f0f0;
-  color: #000;
+  background-color: #267d49;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  svg {
+    width: 15px;
+    scale: 15px;
+    path {
+      fill: aliceblue;
+    }
+  }
 }
 
 .buy-now-btn {

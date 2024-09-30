@@ -9,6 +9,7 @@ import { TestimonialSectionComponent } from './testimonial-section/testimonial-s
 import { FooterComponent } from '../layouts/footer/footer.component';
 import { FakeStoreApiService } from '../../services/fake-store-api.service';
 import { Product } from '../../models/product.model';
+import { CartComponent } from "../layouts/cart/cart.component";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ import { Product } from '../../models/product.model';
     RecommendationSectionComponent,
     TestimonialSectionComponent,
     FooterComponent,
-  ],
+    CartComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
