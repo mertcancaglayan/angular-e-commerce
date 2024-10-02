@@ -1,8 +1,35 @@
-.form-container {
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #c2efd4;
   height: calc(100vh - 120px);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  .form-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.1);
+
+    app-left-section {
+      width: 50%;
+    }
+
+    .right-section {
+      text-align: center;
+      align-content: center;
+      width: 50%;
+      height: 50vh;
+
+      h2 {
+        font-family: "Elephant";
+        font-size: 40px;
+        line-height: 49px;
+        color: #224f34;
+      }
+    }
+  }
 }

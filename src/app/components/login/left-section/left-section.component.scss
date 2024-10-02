@@ -1,0 +1,35 @@
+.left-section {
+  background-color: #224f34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50vh;
+
+  h2 {
+    font-family: "Elephant";
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-family: "Roboto Slab";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  .read-more-btn {
+    background-color: white;
+    color: #4caf50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

@@ -10,12 +10,14 @@
         'is-invalid': email?.invalid && (email?.touched || email?.dirty)
       }"
     />
-    <div
-      *ngIf="email?.invalid && (email?.touched || email?.dirty)"
-      class="invalid-feedback"
-    >
-      <small *ngIf="email?.errors?.['required']">Email is required.</small>
-      <small *ngIf="email?.errors?.['email']">Invalid email format.</small>
+    <div class="invalid-feedback">
+      <div
+        *ngIf="email?.invalid && (email?.touched || email?.dirty)"
+        class="message-area"
+      >
+        <small *ngIf="email?.errors?.['required']">Email is required.</small>
+        <small *ngIf="email?.errors?.['email']">Invalid email format.</small>
+      </div>
     </div>
   </div>
 
@@ -31,16 +33,18 @@
           password?.invalid && (password?.touched || password?.dirty)
       }"
     />
-    <div
-      *ngIf="password?.invalid && (password?.touched || password?.dirty)"
-      class="invalid-feedback"
-    >
-      <small *ngIf="password?.errors?.['required']"
-        >Password is required.</small
+    <div class="invalid-feedback">
+      <div
+        *ngIf="password?.invalid && (password?.touched || password?.dirty)"
+        class="message-area"
       >
-      <small *ngIf="password?.errors?.['minlength']"
-        >Password must be at least 6 characters long.</small
-      >
+        <small *ngIf="password?.errors?.['required']"
+          >Password is required.</small
+        >
+        <small *ngIf="password?.errors?.['minlength']"
+          >Password must be at least 6 characters long.</small
+        >
+      </div>
     </div>
   </div>
 
