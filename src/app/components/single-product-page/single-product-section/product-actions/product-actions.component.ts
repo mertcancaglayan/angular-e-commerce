@@ -46,6 +46,4 @@ export class ProductActionsComponent {
   toggleCart() {
     this.cartService.toggleCart();
   }
-
-
 }
