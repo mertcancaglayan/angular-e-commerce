@@ -58,13 +58,16 @@
       .cartProductImage {
         display: flex;
         align-items: center;
-        width: 90px;
+        width: 20%;
         aspect-ratio: 1;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
+      }
+      .cartProductDetails {
+        width: 70%;
       }
     }
   }

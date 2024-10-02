@@ -14,7 +14,7 @@ export class CartService {
 
   updateCart(cartId: number, products: CartProduct[]): Observable<any> {
     const body = {
-      userId: 5,
+      userId: 1,
       date: new Date().toISOString(),
       products: products.map((p) => ({
         productId: p.productId,
@@ -31,11 +31,9 @@ export class CartService {
 
   toggleCart() {
     this.isCartOpen = !this.isCartOpen;
-    
   }
 
   isCartOpened(): boolean {
-    console.log(this.isCartOpen);
     return this.isCartOpen;
   }
 }
