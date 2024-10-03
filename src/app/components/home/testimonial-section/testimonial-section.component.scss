@@ -7,6 +7,7 @@
   justify-content: center;
 
   h2.section-title {
+    width: 80%;
     font-family: "Roboto Slab";
     font-weight: 500;
     font-size: 50px;
@@ -105,4 +106,16 @@
 .slider-navigation {
   display: flex;
   gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .slider {
+    grid-auto-columns: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    grid-auto-columns: 70%;
+  }
 }

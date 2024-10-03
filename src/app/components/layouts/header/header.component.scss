@@ -14,6 +14,7 @@ header {
       font-size: 40px;
       line-height: 49px;
       color: #224f34;
+      cursor: pointer;
     }
   }
 }
@@ -108,5 +109,15 @@ nav {
     color: #224f34;
     cursor: pointer;
     background: transparent;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    display: none;
+  }
+
+  .header-buttons {
+    display: none;
   }
 }

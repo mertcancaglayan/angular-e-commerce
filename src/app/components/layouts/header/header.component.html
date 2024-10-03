@@ -1,5 +1,6 @@
 <header>
-  <div class="header-title"><h2>Rivo</h2></div>
+  <div class="header-title"><h2 [routerLink]="'/home'">Rivo</h2></div>
+
   <nav>
     <ul>
       <li>
@@ -8,7 +9,12 @@
       <li id="categories-nav-btn">
         <a [routerLink]="'/categories'" routerLinkActive="active">Categories</a>
         <div class="dropdown">
-          <p *ngFor="let category of categoriesList" (click)="navigateToCategory(category)">{{ category }}</p>
+          <p
+            *ngFor="let category of categoriesList"
+            (click)="navigateToCategory(category)"
+          >
+            {{ category }}
+          </p>
         </div>
       </li>
       <li>
@@ -44,4 +50,5 @@
     </div>
     <button [routerLink]="'/login'" class="login-button">LOGIN</button>
   </div>
+  <app-mobile-navbar></app-mobile-navbar>
 </header>

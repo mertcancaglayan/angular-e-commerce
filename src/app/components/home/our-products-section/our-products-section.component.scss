@@ -45,8 +45,49 @@ section.our-products-section {
       justify-content: center;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(4, 200px); 
-      justify-content: space-between; 
+      grid-template-columns: repeat(4, 200px);
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.our-products-section {
+    height: auto;
+
+    .categories-container {
+      width: 70%;
+      ul {
+        li {
+          a {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .products-container {
+      .products {
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .categories-container {
+    width: 70%;
+    ul {
+      width: 100%;
+      li {
+        a {
+          font-size: 10px;
+        }
+      }
     }
   }
 }
