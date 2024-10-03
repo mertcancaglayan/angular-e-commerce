@@ -1,7 +1,7 @@
 .product-card {
   cursor: pointer;
   &.best-selling-section {
-    width: 300px;
+    width: clamp(50px, 280px, 300px);
     .img-container {
       width: 100%;
       aspect-ratio: 5/7;
@@ -81,6 +81,15 @@
       display: flex;
       align-items: center;
       gap: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .product-card {
+    &.our-products-section {
+      width: 150px;
+      height: 300px;
     }
   }
 }

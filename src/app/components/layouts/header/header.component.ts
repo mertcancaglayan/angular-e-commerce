@@ -3,11 +3,12 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { categories } from '../../../utils/category-list';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../../services/cart.service';
+import { MobileNavbarComponent } from "./mobile-navbar/mobile-navbar.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, RouterLinkActive, CommonModule, MobileNavbarComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
