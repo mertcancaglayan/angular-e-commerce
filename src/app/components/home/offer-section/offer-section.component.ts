@@ -12,7 +12,7 @@ export class OfferSectionComponent implements OnInit, OnDestroy {
   minutes: number = 0;
   seconds: number = 0;
 
-  private countdownDate = new Date('Sep 30, 2024 23:59:59').getTime();
+  private countdownDate = new Date('Oct 30, 2024 23:59:59').getTime();
   private intervalId: number | undefined;
 
   ngOnInit() {
