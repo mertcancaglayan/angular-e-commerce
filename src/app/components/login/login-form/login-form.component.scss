@@ -7,7 +7,7 @@ form {
   height: 20vh;
   gap: 10px;
 
-  button {
+  button#login-btn {
     padding: 8px 15px;
     background-color: #a3f3be;
     border: 1px solid #072e14;
@@ -19,7 +19,12 @@ form {
     line-height: 30px;
     text-transform: uppercase;
     color: #224f34;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: #072e14;
+      color: white;
+    }
   }
 
   .form-group {
@@ -40,7 +45,7 @@ form {
     }
 
     .invalid-feedback {
-        height: 15px;
+      height: 15px;
     }
   }
 }
