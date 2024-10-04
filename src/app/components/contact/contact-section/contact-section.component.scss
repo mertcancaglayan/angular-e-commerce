@@ -13,3 +13,21 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .contact-section {
+    height: auto;
+    .section-content {
+      width: 85%;
+      margin: 0 0 50px 0;
+      gap: 50px;
+      flex-wrap: wrap;
+
+      app-contact-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

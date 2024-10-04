@@ -23,7 +23,7 @@
   }
 }
 
-form.form {
+form {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -75,5 +75,32 @@ form.form {
     text-transform: uppercase;
     cursor: pointer;
     background: transparent;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 35px;
+      input {
+        width: 280px;
+      }
+    }
+
+    .area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      textarea {
+        width: 280px;
+      }
+    }
   }
 }

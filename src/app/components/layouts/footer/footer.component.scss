@@ -170,8 +170,11 @@
       }
     }
   }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .footer-section {
+    height: auto;
     .footer-container {
       flex-direction: column;
       align-items: center;
@@ -190,6 +193,17 @@
       .footer-bottom ul {
         justify-content: center;
         margin-top: 20px;
+      }
+    }
+
+    .footer-bottom {
+      margin: 20px 0 0;
+      justify-content: center;
+      hr {
+        display: none;
+      }
+      ul {
+        width: auto;
       }
     }
   }
