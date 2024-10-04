@@ -1,5 +1,5 @@
 #cd-cart {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -8,13 +8,13 @@
   top: 0;
   right: -100%;
   height: 100vh;
-  width: 25%;
   background-color: #ffffff;
   width: 565px;
   transition: right 0.3s ease-in-out;
 
   &.open {
     right: 0;
+    z-index: 1000;
   }
 
   .cart-header {
@@ -110,5 +110,11 @@
         color: white;
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #cd-cart {
+    width: 100%;
   }
 }

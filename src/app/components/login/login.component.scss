@@ -7,7 +7,7 @@ section {
   width: 100%;
 
   .form-container {
-    width: 50%;
+    width: clamp(50vw, 60vw, 70vw);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,6 +29,27 @@ section {
         font-size: 40px;
         line-height: 49px;
         color: #224f34;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    height: auto;
+    padding: 50px 0;
+
+    .form-container {
+      height: auto;
+      width: 80%;
+      flex-wrap: wrap;
+
+      app-left-section {
+        width: 100%;
+      }
+
+      .right-section {
+        width: 100%;
       }
     }
   }
