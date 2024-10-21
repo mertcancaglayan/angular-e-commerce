@@ -1,11 +1,4 @@
 section.recommendation-section {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
   h2.section-title {
     font-family: "Roboto Slab";
     font-weight: 500;
@@ -61,9 +54,6 @@ section.recommendation-section {
       }
     }
   }
-}
-
-@media screen and (max-width: 1000px) {
 }
 
 @media screen and (max-width: 768px) {

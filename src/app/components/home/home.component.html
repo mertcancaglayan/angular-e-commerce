@@ -1,9 +1,31 @@
-<app-header></app-header>
-<app-banner></app-banner>
-<app-best-selling-section [products]="products"></app-best-selling-section>
-<app-our-products-section [products]="products"></app-our-products-section>
-<app-offer-section></app-offer-section>
-<app-recommendation-section></app-recommendation-section>
-<app-testimonial-section></app-testimonial-section>
-<app-cart></app-cart>
-<app-footer></app-footer>
+<div #section>
+  <app-header></app-header>
+</div>
+
+<div id="banner">
+  <app-banner></app-banner>
+</div>
+
+<div #section id="best-selling">
+  <app-best-selling-section [products]="products"></app-best-selling-section>
+</div>
+
+<div #section id="our-products">
+  <app-our-products-section [products]="products"></app-our-products-section>
+</div>
+
+<div #section id="offer">
+  <app-offer-section></app-offer-section>
+</div>
+
+<div #section id="recommendation">
+  <app-recommendation-section></app-recommendation-section>
+</div>
+
+<div #section id="testimonial">
+  <app-testimonial-section></app-testimonial-section>
+</div>
+
+<div #section>
+  <app-footer></app-footer>
+</div>

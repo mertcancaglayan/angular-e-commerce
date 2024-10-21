@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './recommendation-section.component.html',
-  styleUrl: './recommendation-section.component.scss'
+  styleUrls: [
+    './recommendation-section.component.scss',
+    '../home.component.scss',
+  ],
 })
-export class RecommendationSectionComponent {
-
-}
+export class RecommendationSectionComponent {}

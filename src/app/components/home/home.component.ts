@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  OnInit,
+  AfterViewInit,
+  QueryList,
+  ElementRef,
+  ViewChildren,
+} from '@angular/core';
 import { HeaderComponent } from '../layouts/header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { BestSellingSectionComponent } from './best-selling-section/best-selling-section.component';
@@ -9,7 +17,6 @@ import { TestimonialSectionComponent } from './testimonial-section/testimonial-s
 import { FooterComponent } from '../layouts/footer/footer.component';
 import { FakeStoreApiService } from '../../services/fake-store-api.service';
 import { Product } from '../../models/product.model';
-import { CartComponent } from "../layouts/cart/cart.component";
 
 @Component({
   selector: 'app-home',
@@ -23,13 +30,15 @@ import { CartComponent } from "../layouts/cart/cart.component";
     RecommendationSectionComponent,
     TestimonialSectionComponent,
     FooterComponent,
-    CartComponent
-],
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   products: Product[] = [];
+  private currentSectionIndex = 0;
+
+  @ViewChildren('section') sections!: QueryList<ElementRef>;
 
   constructor(private apiService: FakeStoreApiService) {}
 
@@ -46,5 +55,44 @@ export class HomeComponent implements OnInit {
         console.error('Error fetching products', error);
       }
     );
+  }
+
+  @HostListener('window:wheel', ['$event'])
+  onScroll(event: WheelEvent): void {
+    const delta = Math.sign(event.deltaY);
+
+    if (delta > 0 && this.currentSectionIndex < this.sections.length - 1) {
+      this.currentSectionIndex++;
+    } else if (delta < 0 && this.currentSectionIndex > 0) {
+      this.currentSectionIndex--;
+    }
+
+    this.scrollToSection(this.currentSectionIndex);
+  }
+
+  scrollToSection(index: number): void {
+    const targetSection = this.sections.toArray()[index];
+    const topOffset = targetSection.nativeElement.offsetTop;
+
+    this.smoothScrollTo(topOffset, 200);
+  }
+
+  smoothScrollTo(targetPosition: number, duration: number): void {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const startTime = performance.now();
+
+    const scrollStep = (currentTime: number) => {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+
+      window.scrollTo(0, startPosition + distance * progress);
+
+      if (timeElapsed < duration) {
+        window.requestAnimationFrame(scrollStep);
+      }
+    };
+
+    window.requestAnimationFrame(scrollStep);
   }
 }
