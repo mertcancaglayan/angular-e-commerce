@@ -1,6 +1,7 @@
 export interface CartProduct {
   productId: number;
   quantity: number;
+  price: number;
 }
 
 export interface Cart {

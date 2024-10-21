@@ -29,7 +29,7 @@ export class CartService {
     return this.http.get(`${this.apiUrl}/${cartId}`);
   }
 
-  toggleCart() {
+  toggleCart(): void {
     this.isCartOpen = !this.isCartOpen;
   }
 
