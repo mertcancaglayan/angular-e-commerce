@@ -12,7 +12,7 @@ import { CartService } from '../../../../services/cart.service';
   styleUrl: './mobile-navbar.component.scss',
 })
 export class MobileNavbarComponent implements OnInit {
-  isMenuClosed: boolean = true;
+  isMenuClosed: boolean = true
   categoriesList = categories;
 
   constructor(private router: Router, private cartService: CartService) {}
@@ -26,7 +26,6 @@ export class MobileNavbarComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuClosed = !this.isMenuClosed;
-    console.log(this.isMenuClosed);
   }
 
   toggleCart() {

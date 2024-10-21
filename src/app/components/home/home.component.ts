@@ -59,6 +59,8 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:wheel', ['$event'])
   onScroll(event: WheelEvent): void {
+    if (window.innerWidth <= 1024) return; // Yalnızca geniş ekranlarda çalışsın
+
     const delta = Math.sign(event.deltaY);
 
     if (delta > 0 && this.currentSectionIndex < this.sections.length - 1) {

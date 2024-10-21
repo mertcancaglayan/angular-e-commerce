@@ -14,6 +14,7 @@ export class ProductActionsComponent {
   @Input() productId!: number;
   quantity: number = 1;
   cartId: number = 1;
+  price: number = 1;
 
   constructor(private cartService: CartService) {}
 
@@ -31,6 +32,7 @@ export class ProductActionsComponent {
     const cartProduct: CartProduct = {
       productId: this.productId,
       quantity: this.quantity,
+      price: this.price,
     };
 
     this.cartService.updateCart(this.cartId, [cartProduct]).subscribe({

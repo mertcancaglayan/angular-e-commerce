@@ -37,19 +37,21 @@ h2.page-title {
   color: #224f34;
 }
 
-.apper-item {
-  animation: appear 0.3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 35%;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.5;
+@media screen and (min-width: 1024px) {
+  .apper-item {
+    animation: appear 0.3s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
   }
-  to {
-    opacity: 1;
-    scale: 1;
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
   }
 }
