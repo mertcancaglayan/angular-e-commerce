@@ -4,7 +4,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   selector: 'app-offer-section',
   standalone: true,
   templateUrl: './offer-section.component.html',
-  styleUrls: ['./offer-section.component.scss'],
+  styleUrls: ['./offer-section.component.scss', '../home.component.scss'],
 })
 export class OfferSectionComponent implements OnInit, OnDestroy {
   days: number = 0;

@@ -1,11 +1,4 @@
-import {
-  Component,
-  AfterViewInit,
-  Inject,
-  PLATFORM_ID,
-  ElementRef,
-  ViewChild,
-} from '@angular/core';
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Testimonial } from '../../../models/testimonial.model';
 import { testimonials } from '../../../utils/testimonial-list';
@@ -15,13 +8,13 @@ import { testimonials } from '../../../utils/testimonial-list';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './testimonial-section.component.html',
-  styleUrl: './testimonial-section.component.scss',
+  styleUrls: ['./testimonial-section.component.scss', '../home.component.scss'],
 })
 export class TestimonialSectionComponent implements AfterViewInit {
   slider!: HTMLElement;
   error: boolean = false;
 
-  testimonials: Testimonial[] = testimonials
+  testimonials: Testimonial[] = testimonials;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 

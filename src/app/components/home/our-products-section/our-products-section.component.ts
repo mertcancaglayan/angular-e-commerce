@@ -8,7 +8,10 @@ import { Product } from '../../../models/product.model';
   standalone: true,
   imports: [CardComponent, CommonModule],
   templateUrl: './our-products-section.component.html',
-  styleUrl: './our-products-section.component.scss',
+  styleUrls: [
+    './our-products-section.component.scss',
+    '../home.component.scss',
+  ],
 })
 export class OurProductsSectionComponent {
   cardType: string = 'our-products-section';
